@@ -39,5 +39,5 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: /__w/minecraft_fortnite/minecraft_fortnite/target/minecraft-fortnite-${{ steps.project.outputs.version }}.jar
-          asset_name: TypeWriter-${{ steps.project.outputs.version }}.jar
+          asset_name: FortniteBuilding-${{ steps.project.outputs.version }}.jar
           asset_content_type: application/jar
