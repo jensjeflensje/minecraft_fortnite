@@ -49,7 +49,10 @@ public abstract class BaseBuildStyle implements BuildStyle {
 
     @Override
     public void build() {
-        this.getStructure().forEach(partLocation -> partLocation.getBlock().setType(this.material));
+        this.getStructure().forEach(partLocation -> {
+            if (!partLocation.getBlock().getType().equals(Material.AIR)) return;
+            partLocation.getBlock().setType(this.material);
+        });
     }
 
     protected Location getBaseLocation() {
